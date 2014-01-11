@@ -1,6 +1,3 @@
-var _ = require('lodash');
-
-
 /**
  * sails-generate-generator
  * 
@@ -10,16 +7,6 @@ var _ = require('lodash');
  * @type {Object}
  */
 module.exports = {
-
-	bootstrap: function (scope, cb) {
-		_.defaults(scope, {
-			moduleName: 'sails-generate-'+scope.args[0],
-			author: 'A Node.js/Sails.js Contributor',
-			year: (new Date()).getFullYear()
-		});
-		cb();
-	},
-
 	targets: {
 		'.': {
 			exec: function (scope, cb) {

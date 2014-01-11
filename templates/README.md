@@ -1,4 +1,4 @@
-# sails-generate-generator
+# <%=moduleName%>
 
 A generator for Sails.js.
 
@@ -16,7 +16,7 @@ sails generate generator foo
 ```javascript
 var generate = require('sails-generate');
 var scope = {};
-generate(require('sails-generate-generator'), scope, function (err) {
+generate(require('<%=moduleName%>'), scope, function (err) {
 	if (err) throw err;
 
 	// Log output available in `scope` for your enjoyment:
