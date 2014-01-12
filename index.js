@@ -1,6 +1,4 @@
 var _ = require('lodash');
-var path = require('path');
-
 
 
 /**
@@ -28,7 +26,6 @@ module.exports = {
 			) );
 		}
 
-
 		_.defaults(scope, {
 			moduleName: 'sails-generate-'+name,
 			author: 'A Node.js/Sails.js Contributor',
@@ -42,8 +39,3 @@ module.exports = {
 		'./:arg0': { folder: {} }
 	}
 };
-
-// exec: function (scope, cb) {
-// 	console.log('TODO: generate stuff starting @ `'+scope.destPath+'`...');
-// 	cb();
-// } }
