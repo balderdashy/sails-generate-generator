@@ -16,11 +16,11 @@ sails generate generator foo
 ```javascript
 var generate = require('sails-generate');
 var scope = {};
-generate(require('sails-generate-generator'), scope, function (err) {
+generate(require('sails-generate-generator'), scope, function (err, output) {
 	if (err) throw err;
 
-	// Log output available in `scope` for your enjoyment:
-	console.log(scope);
+	// Log output for your enjoyment:
+	console.log(output);
 });
 ```
 
