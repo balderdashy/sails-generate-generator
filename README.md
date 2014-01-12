@@ -24,6 +24,9 @@ generate(require('sails-generate-generator'), scope, function (err, output) {
 });
 ```
 
+## Questions?
+
+See `FAQ.md`.
 
 ## Contributing to this generator
 

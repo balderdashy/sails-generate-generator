@@ -1,4 +1,4 @@
-# Contributing to `<%= moduleName %>`
+# Contributing to `sails-generate-generator`
 
 
 ## Opening Issues
@@ -22,4 +22,4 @@ See [Submitting Pull Requests](https://github.com/balderdashy/sails/blob/master/
 Please see the [contribution guide](https://github.com/balderdashy/sails/blob/v0.10/CONTRIBUTING.md#contributing-to-a-generator) in the Sails repo for more general guidelines.
 
 
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/8acf2fc2ca0aca8a3018e355ad776ed7 "githalytics.com")](http://githalytics.com/balderdashy/<%= moduleName %>/CONTRIBUTING.md)
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/8acf2fc2ca0aca8a3018e355ad776ed7 "githalytics.com")](http://githalytics.com/balderdashy/sails-generate-generator/CONTRIBUTING.md)
