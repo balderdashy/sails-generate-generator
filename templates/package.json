@@ -1,7 +1,7 @@
 {
   "name": "<%=moduleName%>",
   "version": "0.0.0",
-  "description": "Generate <%=entity%> in a Sails app.",
+  "description": "Generate a <%=entity%> for Sails.",
   "main": "index.js",
   "scripts": {
     "test": "mocha"

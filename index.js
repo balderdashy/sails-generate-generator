@@ -43,6 +43,7 @@ module.exports = {
 		'./:arg0':                   { folder: {} },
 		'./:arg0/index.js':          { ejs: path.resolve(__dirname, './templates/index.js') },
 		'./:arg0/CONTRIBUTING.md':   { ejs: path.resolve(__dirname, './templates/CONTRIBUTING.md') },
+		'./:arg0/FAQ.md':            { ejs: path.resolve(__dirname, './templates/FAQ.md') },
 		'./:arg0/LICENSE.md':        { ejs: path.resolve(__dirname, './templates/LICENSE') },
 		'./:arg0/README.md':         { ejs: path.resolve(__dirname, './templates/README.md') },
 		'./:arg0/.gitignore':        { copy: path.resolve(__dirname, './templates/.gitignore') },
