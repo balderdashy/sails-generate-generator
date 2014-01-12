@@ -13,6 +13,8 @@ var _ = require('lodash');
  */
 module.exports = {
 
+	id: require('./package.json').name,
+
 	// TODO: implement a validation/usage feedback interface like this:
 	// usage: 'sails generate generator :generatorType --author',
 
