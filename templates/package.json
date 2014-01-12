@@ -1,0 +1,19 @@
+{
+  "name": "<%=moduleName%>",
+  "version": "0.0.0",
+  "description": "Generate <%=entity%> in a Sails app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "<%=entity%>",
+    "generator",
+    "sails",
+    "generate",
+    "plugin"
+  ],
+  "author": "<%= author %>",
+  "license": "MIT",
+  "dependencies": {}
+}

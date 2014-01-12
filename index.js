@@ -20,9 +20,9 @@ module.exports = {
 	// usage: 'sails generate generator :generatorType --author',
 
 	bootstrap: function (scope, cb) {
-		var name = scope.arg0;
+		var entity = scope.arg0;
 
-		if (!name) {
+		if (!entity) {
 			return cb( new Error(
 			'Missing argument: Please provide a name for this generator.\n'+
 			'Should override an existing generator, e.g. `controller`.'
@@ -30,9 +30,10 @@ module.exports = {
 		}
 
 		_.defaults(scope, {
-			moduleName: 'sails-generate-'+name,
-			author: 'A Node.js/Sails.js Contributor',
-			year: (new Date()).getFullYear()
+			moduleName: 'sails-generate-'+entity,
+			author: 'a Node.js/Sails.js Contributor',
+			year: (new Date()).getFullYear(),
+			entity: entity
 		});
 
 		cb();
@@ -40,9 +41,11 @@ module.exports = {
 
 	targets: {
 		'./:arg0':                   { folder: {} },
+		'./:arg0/index.js':          { ejs: path.resolve(__dirname, './templates/index.js') },
 		'./:arg0/CONTRIBUTING.md':   { ejs: path.resolve(__dirname, './templates/CONTRIBUTING.md') },
 		'./:arg0/LICENSE.md':        { ejs: path.resolve(__dirname, './templates/LICENSE') },
 		'./:arg0/README.md':         { ejs: path.resolve(__dirname, './templates/README.md') },
-		'./:arg0/index.js':          { ejs: path.resolve(__dirname, './templates/index.js') }
+		'./:arg0/.gitignore':        { copy: path.resolve(__dirname, './templates/.gitignore') },
+		'./:arg0/package.json':      { ejs: path.resolve(__dirname, './templates/package.json') }
 	}
 };

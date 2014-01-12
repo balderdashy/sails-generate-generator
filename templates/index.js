@@ -2,7 +2,7 @@
  * <%= moduleName %>
  * 
  * Usage:
- * `<%= moduleName %> :arg0 :arg1 ...`
+ * `<%= moduleName %>`
  * 
  * @type {Object}
  */
