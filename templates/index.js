@@ -1,18 +1,16 @@
 /**
- * sails-generate-generator
+ * <%= moduleName %>
  * 
  * Usage:
- * `sails generate generator foo`
+ * `<%= moduleName %> :arg0 :arg1 ...`
  * 
  * @type {Object}
  */
 module.exports = {
 	targets: {
-		'.': {
-			exec: function (scope, cb) {
-				console.log('TODO: generate stuff starting @ `'+scope.relPath+'`...');
-				cb();
-			}
-		}
+		'.': { exec: function (scope, cb) {
+			scope.output.push('Running generator (<%= moduleName %>) @ `'+scope.rootPath+'`...');
+			cb();
+		} }
 	}
 };

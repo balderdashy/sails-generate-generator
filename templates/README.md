@@ -8,7 +8,7 @@ A generator for Sails.js.
 #### On the command line
 
 ```sh
-sails generate generator foo
+sails generate <%= moduleName %>
 ```
 
 #### In a node script

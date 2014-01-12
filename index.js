@@ -1,3 +1,4 @@
+var path = require('path');
 var _ = require('lodash');
 
 
@@ -38,6 +39,10 @@ module.exports = {
 	},
 
 	targets: {
-		'./:arg0': { folder: {} }
+		'./:arg0':                   { folder: {} },
+		'./:arg0/CONTRIBUTING.md':   { ejs: path.resolve(__dirname, './templates/CONTRIBUTING.md') },
+		'./:arg0/LICENSE.md':        { ejs: path.resolve(__dirname, './templates/LICENSE') },
+		'./:arg0/README.md':         { ejs: path.resolve(__dirname, './templates/README.md') },
+		'./:arg0/index.js':          { ejs: path.resolve(__dirname, './templates/index.js') }
 	}
 };
