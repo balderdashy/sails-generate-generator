@@ -2,7 +2,6 @@
  * Module dependencies
  */
 var sailsgen = require('sails-generate');
-var path = require('path');
 var rootrequire = require('root-require');
 var Generator = rootrequire('lib');
 
@@ -13,7 +12,7 @@ if (!process.argv[2]) {
 }
 
 var scope = {
-	rootPath: path.resolve(__dirname),
+	rootPath: process.cwd(),
 	generatorName: process.argv[2]
 };
 sailsgen(Generator, scope, function (err) {
