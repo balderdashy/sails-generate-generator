@@ -1,4 +1,12 @@
 /**
+ * Generator dependencies
+ */
+
+var path = require('path');
+
+
+
+/**
  * <%= moduleName %>
  *
  * Usage:
@@ -7,11 +15,11 @@
  * @type {Object}
  */
 module.exports = {
+
+	bootstrap: require('./lib/bootstrap'),
+
 	targets: {
-		'./': { exec: function (scope, cb) {
-			scope.output.push('Running generator (<%= moduleName %>) @ `'+scope.rootPath+'`...');
-			cb();
-		} }
+		'./': { exec: function (scope, cb) { console.log('Running generator (<%= moduleName %>) @ `'+scope.rootPath+'`...'); cb(); }}
 	}
 };
 
@@ -29,13 +37,28 @@ module.exports = {
 // Generate a folder: (`folder`)
 // './controllers': { folder: {} }
 //
-// Copy a file : (`copy`)
-// './someTemplate.foo': { copy: path.resolve(__dirname, './someTemplate.foo') },
 //
-// Render an EJS template: (`ejs`)
-// (note: the template doesn't have to end in *.ejs)
-// './someTemplate.ejs': { ejs: path.resolve(__dirname, './someTemplate.ejs') },
+//
+// Copy a file : (`copy`)
+// (note: if the path doesn't exist, empty directories will be created, like mkdirp)
+//
+// './bar.foo': { copy: path.resolve(__dirname, './templates/foo.template') },
+// './baz/bar/foo': { copy: path.resolve(__dirname, './templates/foo.template') },
+//
+//
+//
+// Render an EJS template: (`template`)
+// (note: the template filename doesn't have to end in *.ejs)
+// './README.md': { template: path.resolve(__dirname, './templates/README.template') },
+//
+//
 //
 // Run another generator:
-// './controllers/:controllerName.js': 'controller'
+// './controllers/:controllerName.js': 'adapter'
 //
+//
+// Do something custom: (asynchronous)
+// './foo/bar': { exec: function (scope, cb) {
+//   cb();
+// }}
+
