@@ -1,14 +1,14 @@
 /**
  * <%= moduleName %>
- * 
+ *
  * Usage:
  * `<%= moduleName %>`
- * 
+ *
  * @type {Object}
  */
 module.exports = {
 	targets: {
-		'./:arg0': { exec: function (scope, cb) {
+		'./': { exec: function (scope, cb) {
 			scope.output.push('Running generator (<%= moduleName %>) @ `'+scope.rootPath+'`...');
 			cb();
 		} }
@@ -16,26 +16,26 @@ module.exports = {
 };
 
 
-// Generator syntax:
-// 
+// Output targets syntax:
+//
 // You can use params in your target paths:
 // {
 //   './:someScopeVariable/somethingStatic/:somethingDynamicAgain': '...'
 // }
 
+
 // Other directives:
-// 
-// 
+//
 // Generate a folder: (`folder`)
-// './:arg0/controllers': { folder: {} }
+// './controllers': { folder: {} }
 //
 // Copy a file : (`copy`)
-// './:arg0/someTemplate.foo': { copy: path.resolve(__dirname, './someTemplate.foo') },
+// './someTemplate.foo': { copy: path.resolve(__dirname, './someTemplate.foo') },
 //
 // Render an EJS template: (`ejs`)
 // (note: the template doesn't have to end in *.ejs)
-// './:arg0/someTemplate.ejs': { ejs: path.resolve(__dirname, './someTemplate.ejs') },
+// './someTemplate.ejs': { ejs: path.resolve(__dirname, './someTemplate.ejs') },
 //
 // Run another generator:
-// './:arg0/controllers/:controllerName.js': 'controller'
+// './controllers/:controllerName.js': 'controller'
 //
