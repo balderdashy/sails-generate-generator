@@ -10,21 +10,24 @@ var reportback = require('reportback')()
 
 
 
-var TEST_SCOPE = {
-	rootPath: __dirname,
-	name: 'generator'
-};
+//
+// Constants
+//
+var ROOT_PATH = path.resolve(__dirname, '.test_output');
+var GENERATOR_NAME = 'generator';
+var EXPECTED_OUTPUT_PATH = path.resolve(ROOT_PATH, GENERATOR_NAME);
+var CLEANUP_PATH = ROOT_PATH;
 
 
-// Failsafe to avoid accidentally deleting your hard disk
-// (limits highest permissible path for rimrafing)
-var EXPECTED_OUTPUT_PATH = path.resolve(TEST_SCOPE.rootPath, TEST_SCOPE.name);
-var PATH_CEILING = path.resolve(__dirname);
-
-if ( !_isSubPath(EXPECTED_OUTPUT_PATH, PATH_CEILING) ) {
+//
+// Validate path against "ceiling"
+// (failsafe to avoid accidentally deleting your hard disk
+//  by limiting highest permissible path for rimrafing)
+//
+if ( !_isSubPath(CLEANUP_PATH, ROOT_PATH) ) {
 	throw new Error(
-		'Invalid path: `'+EXPECTED_OUTPUT_PATH+'`\n'+
-		'(must be within `'+PATH_CEILING+'`)\n'
+		'Invalid cleanup path: `'+CLEANUP_PATH+'`\n'+
+		'(must be within `'+ROOT_PATH+'`)\n'
 	);
 }
 
@@ -41,7 +44,12 @@ module.exports = {
 
 		_cleanup(reportback.extend({
 			success: function () {
-				sailsgen(Generator, TEST_SCOPE, done);
+
+				// Run generator using contrived scope
+				sailsgen(Generator, {
+					rootPath: ROOT_PATH,
+					name: GENERATOR_NAME
+				}, done);
 			}
 		}));
 	},
@@ -53,15 +61,17 @@ module.exports = {
 };
 
 
+
+
 /**
- * Clean up (delete) whatever is at the expected output path
+ * Clean up (delete) whatever is at the ROOT_PATH
  * of this generator.
  *
  * @param  {Function} cb [description]
  * @return {[type]}      [description]
  */
 function _cleanup (cb) {
-	fsx.remove(EXPECTED_OUTPUT_PATH, cb);
+	fsx.remove(ROOT_PATH, cb);
 }
 
 /**
@@ -85,6 +95,5 @@ function _regExcape(str) {
  */
 function _isSubPath(subpath, toppath) {
 	var regex = new RegExp('^' + _regExcape(toppath));
-	console.log('\n'+regex+'\n');
 	return subpath.match(regex);
 }
