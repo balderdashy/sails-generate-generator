@@ -13,7 +13,8 @@ var Generator = require('../lib');
 
 
 sailsgen(Generator, {
-	rootPath: process.cwd()
+	rootPath: process.cwd(),
+	generatorName: argv[2]
 }, function (err) {
 	if (err) throw err;
 

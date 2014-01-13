@@ -6,10 +6,10 @@ var rootrequire = require('root-require');
 var Generator = rootrequire('lib');
 
 
-// Cheap access so we can run this generator directly
-if (!process.argv[2]) {
-	throw 'Please specify the `generatorName` as the first argument.';
-}
+//
+// This script exists so we can run this generator
+// directly from the command-line for convenience.
+//
 
 var scope = {
 	rootPath: process.cwd(),
