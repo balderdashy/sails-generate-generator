@@ -1,25 +1,20 @@
 /**
- * Module dependencies.
+ * Test dependencies
  */
+var lifecycle = require('./lifecycle.helper');
 
-var reportback = require('reportback')();
-var sailsgen = require('sails-generate');
-var Generator = require('../lib');
 
+/**
+ * Test the generator.
+ */
 
 describe('generator', function () {
 
-	before(function (cb) {
-		var report = reportback.extend(cb);
-
-		sailsgen(Generator, {
-			name: 'generator',
-			rootPath: __dirname
-		}, report);
-	});
+	before(lifecycle.before);
 
 	it('should work', function () {
-		// For now, this just runs the generator so you can try it out.
+		// For now, just runs the generator.
 	});
 
+	after(lifecycle.after);
 });
