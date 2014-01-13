@@ -29,7 +29,7 @@ describe('generator', function () {
 	before( lifecycle.setup(Generator, SCOPE) );
 
 	it('should work', function () {
-		// For now, just runs the generator.
+		// For now, just run the generator.
 	});
 
 	after( lifecycle.teardown() );
