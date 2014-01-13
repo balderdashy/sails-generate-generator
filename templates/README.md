@@ -20,13 +20,15 @@ else {
 #### In a node script
 
 ```javascript
-var generate = require('sails-generate');
-var scope = {};
-generate(require('<%=moduleName%>'), scope, function (err) {
+var path = require('path');
+var sailsgen = require('sails-generate');
+var scope = {
+	rootPath: path.resolve(__dirname)
+};
+sailsgen(require('<%=moduleName%>'), scope, function (err) {
 	if (err) throw err;
 
-	// Log output available in `scope` for your enjoyment:
-	console.log(scope);
+	// It worked.
 });
 ```
 
