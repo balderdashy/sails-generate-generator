@@ -17,17 +17,21 @@ var _ = require('lodash');
 
 module.exports = function(scope, cb) {
 
-	// validate custom scope variables required by this generator
-	if (!scope.someRequiredThing) {
-		return cb(new Error(
-			'Missing scope variable: `someRequiredThing`\n' +
-			'Please make sure it is specified and try again.'
-		));
+	// validate custom scope variables which
+	// are required by this generator, e.g.
+	if ( !scope.someRequiredThing ) {
+		// return cb(new Error(
+		// 	'Missing scope variable: `someRequiredThing`\n' +
+		// 	'Please make sure it is specified and try again.'
+		// ));
 	}
 
+
+	// mixin default scope variables, e.g.
 	_.defaults(scope, {
-		// default scope variables for this generator
+		someThing: 'someValueForIt'
 	});
 
+	// trigger callback with no error to proceed
 	cb();
 };
