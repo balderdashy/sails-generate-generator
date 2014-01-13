@@ -10,11 +10,11 @@ var lifecycle = require('./lifecycle.helper');
 
 describe('generator', function () {
 
-	before(lifecycle.before);
+	before( lifecycle.setup );
 
 	it('should work', function () {
 		// For now, just runs the generator.
 	});
 
-	after(lifecycle.after);
+	after( lifecycle.teardown );
 });

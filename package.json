@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "sails-generate": "*",
-    "reportback": "*"
+    "reportback": "*",
+    "fs-extra": "*"
   }
 }
