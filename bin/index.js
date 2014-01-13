@@ -19,4 +19,5 @@ sailsgen(Generator, scope, function (err) {
 	if (err) throw err;
 
 	// It worked.
+	console.log('Done.');
 });
