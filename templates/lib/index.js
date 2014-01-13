@@ -2,7 +2,9 @@
  * Module dependencies
  */
 
-var path = require('path');
+var path = require('path')
+	, rootrequire = require('root-require');
+
 
 
 
@@ -14,9 +16,10 @@ var path = require('path');
  *
  * @type {Object}
  */
+
 module.exports = {
 
-	bootstrap: require('./lib/bootstrap'),
+	bootstrap: rootrequire('lib/bootstrap'),
 
 	targets: {
 		'./': { exec: function (scope, cb) { console.log('Running generator (<%= moduleName %>) @ `'+scope.rootPath+'`...'); cb(); }}

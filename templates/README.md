@@ -8,7 +8,13 @@ A generator for Sails.js.
 #### On the command line
 
 ```sh
-<%= ( usage || '$ sails generate <%= generatorName %>' ) %>
+<% if (typeof usage === 'undefined') {
+%>$ sails generate <%= generatorName %> <%
+}
+else {
+%><%= usage %><%
+}
+%>
 ```
 
 #### In a node script

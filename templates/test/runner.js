@@ -10,8 +10,12 @@ var lifecycle = require('./helpers/lifecycle')
 // Fixtures
 //
 var SCOPE = {
+
 	rootPath: '.',
-	generatorName: 'foobar'
+
+	// Other scope variables to include in tests
+	// ...
+
 };
 
 
@@ -28,5 +32,5 @@ describe('generator', function () {
 		// For now, just runs the generator.
 	});
 
-	// after( lifecycle.teardown() );
+	after( lifecycle.teardown() );
 });
