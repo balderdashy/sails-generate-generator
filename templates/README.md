@@ -1,6 +1,6 @@
 # <%=moduleName%>
 
-A generator for Sails.js.
+A `<%= generatorName %>` generator for Sails.js.
 
 
 ## Usage
