@@ -7,18 +7,14 @@ var sailsgen = require('sails-generate');
 var Generator = require('../lib');
 
 
-
-
 describe('generator', function () {
 
 	before(function (cb) {
-		var report = reportback.extend({
-			success: cb,
-			error: cb
-		});
+		var report = reportback.extend(cb);
 
 		sailsgen(Generator, {
-			name: 'generator'
+			name: 'generator',
+			rootPath: __dirname
 		}, report);
 	});
 
