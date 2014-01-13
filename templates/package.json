@@ -1,13 +1,13 @@
 {
   "name": "<%=moduleName%>",
   "version": "0.10.0",
-  "description": "Generate a <%=entity%> for Sails.",
+  "description": "Generate a <%=generatorName%> for Sails.",
   "main": "gen/index.js",
   "scripts": {
     "test": "mocha"
   },
   "keywords": [
-    "<%=entity%>",
+    "<%=generatorName%>",
     "generator",
     "sails",
     "generate",
@@ -18,5 +18,14 @@
   "dependencies": {
   	"lodash": ">=2.4.x",
     "root-require": ">=0.2.x"
+  },
+  "devDependencies": {
+    "sails-generate": "*",
+    "reportback": "*",
+    "fs-extra": "*"
+  },
+  "sailsGenerator": {
+ 		"generatorName": "<%= generatorName %>",
+ 		"sailsVersion": "~0.10.0"
   }
 }

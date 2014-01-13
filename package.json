@@ -30,5 +30,9 @@
     "sails-generate": "*",
     "reportback": "*",
     "fs-extra": "*"
+  },
+  "sailsGenerator": {
+ 		"identity": "generator",
+ 		"sailsVersion": "~0.10.0"
   }
 }

@@ -10,7 +10,7 @@ var path = require('path');
  * <%= moduleName %>
  *
  * Usage:
- * `<%= moduleName %>`
+ * `sails generate <%= generatorName %>`
  *
  * @type {Object}
  */

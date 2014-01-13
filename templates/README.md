@@ -8,7 +8,7 @@ A generator for Sails.js.
 #### On the command line
 
 ```sh
-sails generate <%= entity %>
+<%= ( usage || '$ sails generate <%= generatorName %>' ) %>
 ```
 
 #### In a node script

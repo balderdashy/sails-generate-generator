@@ -8,7 +8,8 @@ var _ = require('lodash');
 
 
 /**
- * This boostrap function is run right before your generator.
+ * This bootstrap function is run before generating targets.
+ * Validate, configure defaults, get extra dependencies, etc.
  *
  * @param  {Object} scope
  * @param  {Function} cb    [callback]
@@ -16,9 +17,8 @@ var _ = require('lodash');
 
 module.exports = function(scope, cb) {
 
-	// make sure you have everything you need
-	// (validate required scope variables)
-	if ( !scope.someRequiredThing ) {
+	// validate custom scope variables required by this generator
+	if (!scope.someRequiredThing) {
 		return cb(new Error(
 			'Missing scope variable: `someRequiredThing`\n' +
 			'Please make sure it is specified and try again.'
@@ -26,7 +26,7 @@ module.exports = function(scope, cb) {
 	}
 
 	_.defaults(scope, {
-		// your default scope variables here
+		// default scope variables for this generator
 	});
 
 	cb();
