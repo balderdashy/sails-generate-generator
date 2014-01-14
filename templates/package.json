@@ -16,16 +16,19 @@
   "author": "<%= author %>",
   "license": "MIT",
   "dependencies": {
-  	"lodash": ">=2.4.x",
-    "root-require": ">=0.2.x"
+  	"lodash": ">=2.4.x"
   },
   "devDependencies": {
     "sails-generate": "*",
     "reportback": "*",
-    "fs-extra": "*"
+    "fs-extra": "*",
+    "root-require": ">=0.2.x"
   },
-  "sailsGenerator": {
- 		"generatorName": "<%= generatorName %>",
- 		"sailsVersion": "~0.10.0"
+  "sails": {
+  	"generator": {
+	 		"generatorName": "<%= generatorName %>",
+	 		"sailsVersion": "~0.10.0",
+	 		"main": "lib/index"
+  	}
   }
 }

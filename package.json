@@ -24,15 +24,18 @@
   "homepage": "https://github.com/balderdashy/sails-generate-generator",
   "dependencies": {
     "lodash": ">=2.4.x",
-    "root-require": ">=0.2.x"
   },
   "devDependencies": {
     "sails-generate": "*",
     "reportback": "*",
+    "root-require": ">=0.2.x",
     "fs-extra": "*"
   },
-  "sailsGenerator": {
- 		"identity": "generator",
- 		"sailsVersion": "~0.10.0"
+  "sails": {
+  	"generator": {
+	 		"generatorName": "generator",
+	 		"sailsVersion": "~0.10.0",
+	 		"main": "lib/index"
+  	}
   }
 }

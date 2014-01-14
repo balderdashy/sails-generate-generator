@@ -9,6 +9,8 @@
 
 module.exports = {
 
+	templatesDirectory: require('path').resolve(__dirname,'../templates'),
+
 	bootstrap: require('./bootstrap'),
 
 	targets: {
