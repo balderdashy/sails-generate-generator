@@ -28,7 +28,7 @@ if ( !_isSubPath(CLEANUP_PATH, PATH_CEILING) ) {
 
 
 /**
- * Test helpers
+ * Generator lifecycle helpers
  * @type {Object}
  */
 

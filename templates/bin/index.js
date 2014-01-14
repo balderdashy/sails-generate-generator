@@ -7,8 +7,9 @@ var Generator = require('../lib');
 
 
 //
-// This script exists so we can run this generator
-// directly from the command-line for convenience.
+// This script exists so we can run our generator
+// directly from the command-line for convenience
+// during development.
 //
 
 
