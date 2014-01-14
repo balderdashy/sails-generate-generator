@@ -5,15 +5,21 @@
 
 A `<%= generatorName %>` generator for use with the Sails command-line interface.
 
+
 ### Installation
 
+Certain generators are installed by default in Sails, but they can be overridden.  Check the [Sails docs](http://sailsjs.org/#!documentation) for information on installing generator overrides / custom generators.
+
+<!--
 ```sh
 $ npm install <%= moduleName %>
 ```
+-->
 
-## Usage
 
-#### On the command line
+### Production Usage
+
+##### On the command line
 
 ```sh
 <% if (typeof usage === 'undefined') {
@@ -25,7 +31,7 @@ else {
 %>
 ```
 
-#### In a node script
+##### In a node script
 
 ```javascript
 var path = require('path');
@@ -41,7 +47,7 @@ sailsgen(require('<%=moduleName%>'), scope, function (err) {
 ```
 
 
-#### Development
+### Development
 
 To get started quickly and see this generator in action, run the `bin/index.js` script:
 

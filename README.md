@@ -7,20 +7,18 @@ A Sails generator for Sails generators.  [Buffalo buffalo Buffalo buffalo buffal
 
 ### Installation
 
-```sh
-$ npm install sails-generate-generator
-```
+Already included in Sails.
 
 
-## Usage
+### Usage
 
-#### On the command line
+##### On the command line
 
 ```sh
 $ sails generate generator foo
 ```
 
-#### In a node script
+##### In a node script
 
 ```javascript
 var generate = require('sails-generate');
@@ -33,7 +31,7 @@ generate(require('sails-generate-generator'), scope, function (err, output) {
 });
 ```
 
-#### Development
+### Development
 
 To get started quickly and see this generator in action, run the `bin/index.js` script:
 
