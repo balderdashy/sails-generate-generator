@@ -1,7 +1,15 @@
-# <%=moduleName%>
+![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
 
-A `<%= generatorName %>` generator for Sails.js.
+# <%= moduleName %>
 
+
+A `<%= generatorName %>` generator for use with the Sails command-line interface.
+
+### Installation
+
+```sh
+$ npm install <%= moduleName %>
+```
 
 ## Usage
 
@@ -43,20 +51,31 @@ $ cd <%= generatorName %>
 $ node ./bin
 ```
 
-`bin/index.js` is a simple script, bundled only for convenience, that runs the generator with hard-coded scope variables.  Feel free to modify that file however you like.
+`bin/index.js` is a simple script, bundled only for convenience, that runs the generator with hard-coded scope variables.  Feel free to modify that file however you for convenience.  Please see `CONTRIBUTING.md` for more information on overriding/enhancing generators.
 
 
-## Questions?
+
+### Questions?
 
 See `FAQ.md`.
 
 
-## Want to override or enhance this generator?
 
-See `CONTRIBUTING.md`.
+### More Resources
+
+- [Stackoverflow](http://stackoverflow.com/questions/tagged/sails.js)
+- [#sailsjs on Freenode](http://webchat.freenode.net/) (IRC channel)
+- [Twitter](https://twitter.com/sailsjs)
+- [Professional/enterprise](https://github.com/balderdashy/sails-docs/blob/master/FAQ.md#are-there-professional-support-options)
+- [Tutorials](https://github.com/balderdashy/sails-docs/blob/master/FAQ.md#where-do-i-get-help)
+- <a href="http://sailsjs.org" target="_blank" title="Node.js framework for building realtime APIs."><img src="https://github-camo.global.ssl.fastly.net/9e49073459ed4e0e2687b80eaf515d87b0da4a6b/687474703a2f2f62616c64657264617368792e6769746875622e696f2f7361696c732f696d616765732f6c6f676f2e706e67" width=60 alt="Sails.js logo (small)"/></a>
 
 
-## License
+### License
 
-See `LICENSE`.
+**[MIT](./LICENSE)**
+&copy; <%= year %> [<%= author %>](<%= website %>) & [contributors]
+[Mike McNeil](http://michaelmcneil.com), [Balderdash](http://balderdash.co) & contributors
+
+[Sails](http://sailsjs.org) is free and open-source under the [MIT License](http://sails.mit-license.org/).
 
