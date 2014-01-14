@@ -38,8 +38,9 @@ generate(require('sails-generate-generator'), scope, function (err, output) {
 To get started quickly and see this generator in action, run the `bin/index.js` script:
 
 ```sh
-$ git clone YOUR_FORK_OF_THIS_REPO <%= generatorName %>
-$ cd <%= generatorName %>
+$ git clone YOUR_FORK_OF_THIS_REPO sails-generate-generator-fork
+$ cd sails-generate-generator-fork
+$ npm install
 $ node ./bin
 ```
 

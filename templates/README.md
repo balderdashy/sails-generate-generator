@@ -46,8 +46,9 @@ sailsgen(require('<%=moduleName%>'), scope, function (err) {
 To get started quickly and see this generator in action, run the `bin/index.js` script:
 
 ```sh
-$ git clone YOUR_FORK_OF_THIS_REPO <%= generatorName %>
-$ cd <%= generatorName %>
+$ git clone YOUR_FORK_OF_THIS_REPO <%= moduleName %>-fork
+$ cd <%= moduleName %>-fork
+$ npm install
 $ node ./bin
 ```
 
