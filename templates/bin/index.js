@@ -15,7 +15,10 @@ var Generator = require('../lib');
 
 sailsgen(Generator, {
 	rootPath: process.cwd(),
-	generatorName: argv[2]
+
+	// You can stub other scope variables here, e.g.
+	// foo: 'bar'
+
 }, function (err) {
 	if (err) throw err;
 
