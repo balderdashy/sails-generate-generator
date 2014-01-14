@@ -39,5 +39,5 @@ See `CONTRIBUTING.md`.
 
 ## License
 
-See `LICENSE.md`.
+See `LICENSE`.
 

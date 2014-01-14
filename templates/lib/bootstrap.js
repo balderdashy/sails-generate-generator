@@ -2,7 +2,11 @@
  * Module dependencies
  */
 
-var _ = require('lodash');
+var util = require('util')
+	, _ = require('lodash');
+
+// Make _.defaults recursive
+_.defaults = require('merge-defaults');
 
 
 

@@ -16,7 +16,8 @@
   "author": "<%= author %>",
   "license": "MIT",
   "dependencies": {
-  	"lodash": ">=2.4.x"
+  	"lodash": ">=2.4.x",
+  	"merge-defaults": ">=0.1.0"
   },
   "devDependencies": {
     "sails-generate": "*",
@@ -26,7 +27,8 @@
   },
   "sails": {
   	"generator": {
-	 		"generatorName": "<%= generatorName %>",
+	 		"name": "<%= generatorName %>",
+	 		"behavior": "overrides `sails generate <%= generatorName %>`",
 	 		"sailsVersion": "~0.10.0",
 	 		"main": "lib/index"
   	}
