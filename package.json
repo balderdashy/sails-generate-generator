@@ -1,6 +1,6 @@
 {
   "name": "sails-generate-generator",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "description": "Generate a sails generator.",
   "main": "lib/index.js",
   "scripts": {
@@ -35,7 +35,7 @@
   "sails": {
     "generator": {
       "name": "generator",
-	 		"behavior": "default",
+      "behavior": "default",
       "sailsVersion": "~0.10.0",
       "main": "lib/index"
     }
