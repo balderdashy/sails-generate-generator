@@ -2,8 +2,7 @@
  * Module dependencies
  */
 var sailsgen = require('sails-generate');
-var rootrequire = require('root-require');
-var Generator = rootrequire('lib');
+var Generator = require('../lib');
 
 
 //

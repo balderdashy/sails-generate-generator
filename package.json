@@ -29,7 +29,6 @@
   "devDependencies": {
     "sails-generate": "*",
     "reportback": "*",
-    "root-require": ">=0.2.x",
     "fs-extra": "*"
   },
   "sails": {
