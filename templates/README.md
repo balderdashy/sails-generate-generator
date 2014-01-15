@@ -58,7 +58,7 @@ $ npm install
 $ node ./bin
 ```
 
-`bin/index.js` is a simple script, bundled only for convenience, that runs the generator with hard-coded scope variables.  Feel free to modify that file however you for convenience.  Please see `CONTRIBUTING.md` for more information on overriding/enhancing generators.
+`bin/index.js` is a simple script, bundled only for convenience, that runs the generator with hard-coded scope variables.  Please feel free to modify that file however you like!  Also see `CONTRIBUTING.md` for more information on overriding/enhancing generators.
 
 
 
