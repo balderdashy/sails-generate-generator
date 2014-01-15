@@ -26,9 +26,9 @@ module.exports = function(scope, cb) {
 	// are required by this generator.
 	//
 
-	if ( !scope.foo ) {
+	if ( !scope.rootPath ) {
 		return cb(new Error(
-			'Missing scope variable: `foo`\n' +
+			'Missing scope variable: `rootPath`\n' +
 			'Please make sure it is specified and try again.'
 		));
 	}

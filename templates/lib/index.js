@@ -11,7 +11,7 @@ module.exports = {
 
 	templatesDirectory: require('path').resolve(__dirname,'../templates'),
 
-	bootstrap: require('./bootstrap'),
+	before: require('./before'),
 
 	targets: {
 		'./': { exec: function (scope, cb) { console.log('Running generator (<%= moduleName %>) @ `'+scope.rootPath+'`...'); cb(); }}
