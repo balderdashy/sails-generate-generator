@@ -2,8 +2,9 @@
  * Module dependencies
  */
 
-var sailsgen = require('sails-generate');
-var Generator = require('../lib');
+var sailsgen = require('sails-generate')
+	, path = require('path');
+
 
 
 //
@@ -14,6 +15,10 @@ var Generator = require('../lib');
 
 
 sailsgen(Generator, {
+	generatorType: '<%= generatorName %>',
+	modules: {
+		'<%= generatorName %>': path.resolve(__dirname, '../lib')
+	},
 	rootPath: process.cwd(),
 
 	// You can stub other scope variables here, e.g.

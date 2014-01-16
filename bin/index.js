@@ -1,8 +1,10 @@
 /**
  * Module dependencies
  */
-var sailsgen = require('sails-generate');
-var Generator = require('../lib');
+
+var sailsgen = require('sails-generate')
+	, path = require('path');
+
 
 
 //
@@ -11,10 +13,16 @@ var Generator = require('../lib');
 //
 
 var scope = {
+	generatorType: 'generator',
 	rootPath: process.cwd(),
-	generatorName: process.argv[2]
+	modules: {
+		generator: path.resolve(__dirname, '../lib')
+	},
+
+	// For the NEW generator we're generating:
+	generatorName: process.argv[2],
 };
-sailsgen(Generator, scope, function (err) {
+sailsgen(scope, function (err) {
 	if (err) throw err;
 
 	// It worked.
