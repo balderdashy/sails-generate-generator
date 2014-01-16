@@ -22,6 +22,22 @@ _.defaults = require('merge-defaults');
 module.exports = function(scope, cb) {
 
 	//
+	// scope.args are the raw command line arguments.
+	//
+	// e.g. if you run:
+	// sails generate controlller user find create update
+	// then:
+	// scope.args = ['user', 'find', 'create', 'update']
+	//
+
+	_.defaults(scope, {
+		// foo: scope.args[0]
+	});
+
+
+
+
+	//
 	// Validate custom scope variables which
 	// are required by this generator.
 	//
