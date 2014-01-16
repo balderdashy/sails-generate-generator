@@ -2,7 +2,7 @@
   "name": "<%=moduleName%>",
   "version": "0.10.0",
   "description": "Generate a <%=generatorName%> for Sails.",
-  "main": "gen/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha"
   },
