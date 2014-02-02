@@ -32,7 +32,7 @@
     "fs-extra": "*"
   },
   "sailsGenerator": {
-    "identity": "generator",
+    "type": "generator",
     "behavior": "default implementation of `sails generate generator`",
     "sailsVersion": "~0.10.0",
     "main": "lib/index"
