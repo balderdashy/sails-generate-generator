@@ -31,12 +31,10 @@
     "reportback": "*",
     "fs-extra": "*"
   },
-  "sails": {
-    "generator": {
-      "name": "generator",
-      "behavior": "default",
-      "sailsVersion": "~0.10.0",
-      "main": "lib/index"
-    }
+  "sailsGenerator": {
+    "identity": "generator",
+    "behavior": "default implementation of `sails generate generator`",
+    "sailsVersion": "~0.10.0",
+    "main": "lib/index"
   }
 }
