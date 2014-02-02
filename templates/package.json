@@ -24,12 +24,10 @@
     "reportback": "*",
     "fs-extra": "*"
   },
-  "sails": {
-  	"generator": {
-	 		"name": "<%= generatorName %>",
-	 		"behavior": "overrides `sails generate <%= generatorName %>`",
-	 		"sailsVersion": "~0.10.0",
-	 		"main": "lib/index"
-  	}
+  "sailsGenerator": {
+    "type": "<%= generatorName %>",
+    "behavior": "overrides `sails generate <%= generatorName %>`",
+    "sailsVersion": "~0.10.0",
+    "main": "lib/index"
   }
 }
