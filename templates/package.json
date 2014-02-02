@@ -27,7 +27,6 @@
   "sailsGenerator": {
     "type": "<%= generatorName %>",
     "behavior": "overrides `sails generate <%= generatorName %>`",
-    "sailsVersion": "~0.10.0",
-    "main": "lib/index"
+    "sailsVersion": "~0.10.0"
   }
 }
