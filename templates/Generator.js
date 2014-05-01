@@ -59,7 +59,7 @@ module.exports = {
     });
 
     // Decide the output filename for use in targets below:
-    scope.filename = args[0];
+    scope.filename = scope.args[0];
 
     // Add other stuff to the scope for use in our templates:
     scope.whatIsThis = 'an example file created at '+scope.createdAt;
@@ -102,7 +102,7 @@ module.exports = {
    *
    * @type {String}
    */
-  templatesDirectory: require('path').resolve(__dirname, '../templates')
+  templatesDirectory: require('path').resolve(__dirname, './templates')
 };
 
 
