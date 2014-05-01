@@ -69,4 +69,6 @@ See `FAQ.md`.
 &copy; 2014
 [Mike McNeil](http://michaelmcneil.com), [Balderdash](http://balderdash.co) & contributors
 
-[Sails](http://sailsjs.org) is free and open-source under the [MIT License](http://sails.mit-license.org/).
+------------------------------------------
+
+As for [Sails](http://sailsjs.org)?  It's free and open-source under the [MIT License](http://sails.mit-license.org/).
