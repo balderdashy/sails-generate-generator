@@ -1,8 +1,8 @@
 {
   "name": "<%=moduleName%>",
   "version": "0.10.0",
-  "description": "Generate a <%=generatorName%> for Sails.",
-  "main": "lib/index.js",
+  "description": "sails generate <%=generatorName %>",
+  "main": "Generator.js",
   "scripts": {
     "test": "mocha"
   },

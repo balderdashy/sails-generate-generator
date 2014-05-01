@@ -1,23 +1,19 @@
-![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
-
 # <%= moduleName %>
 
-
 A `<%= generatorName %>` generator for use with the Sails command-line interface.
+
+Certain generators are installed by default in Sails, but they can be overridden.  Other generators create entirely new things.  Check the [Sails docs](http://sailsjs.org/#!documentation) for information on installing generator overrides / custom generators and information on building your own generators.
+
 
 
 ### Installation
 
-Certain generators are installed by default in Sails, but they can be overridden.  Check the [Sails docs](http://sailsjs.org/#!documentation) for information on installing generator overrides / custom generators.
-
-<!--
 ```sh
 $ npm install <%= moduleName %>
 ```
--->
 
 
-### Production Usage
+### Usage
 
 ##### On the command line
 
@@ -31,34 +27,13 @@ else {
 %>
 ```
 
-##### In a node script
-
-```javascript
-var path = require('path');
-var sailsgen = require('sails-generate');
-var scope = {
-	rootPath: path.resolve(__dirname)
-};
-sailsgen(require('<%=moduleName%>'), scope, function (err) {
-	if (err) throw err;
-
-	// It worked.
-});
-```
 
 
 ### Development
 
-To get started quickly and see this generator in action, run the `bin/index.js` script:
+To get started quickly and see this generator in action, ...
 
-```sh
-$ git clone YOUR_FORK_OF_THIS_REPO <%= moduleName %>-fork
-$ cd <%= moduleName %>-fork
-$ npm install
-$ node ./bin
-```
-
-`bin/index.js` is a simple script, bundled only for convenience, that runs the generator with hard-coded scope variables.  Please feel free to modify that file however you like!  Also see `CONTRIBUTING.md` for more information on overriding/enhancing generators.
+Also see `CONTRIBUTING.md` for more information on overriding/enhancing existing generators.
 
 
 
@@ -81,8 +56,8 @@ See `FAQ.md`.
 ### License
 
 **[MIT](./LICENSE)**
-&copy; <%= year %> [<%= author %>](<%= website %>) & [contributors]
-[Mike McNeil](http://michaelmcneil.com), [Balderdash](http://balderdash.co) & contributors
+&copy; <%= year %> [<%= author %>](<%= website %>) & contributors
 
 [Sails](http://sailsjs.org) is free and open-source under the [MIT License](http://sails.mit-license.org/).
 
+![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
