@@ -58,6 +58,6 @@ See `FAQ.md`.
 **[MIT](./LICENSE)**
 &copy; <%= year %> [<%= author %>](<%= website %>) & contributors
 
-[Sails](http://sailsjs.org) is free and open-source under the [MIT License](http://sails.mit-license.org/).
+As for [Sails](http://sailsjs.org)?  It's free and open-source under the [MIT License](http://sails.mit-license.org/).
 
 ![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
