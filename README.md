@@ -1,4 +1,4 @@
-![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
+# [<img title="sails.io.js - Generate Generator for Sails" src="http://i.imgur.com/5Pe84Ph.png" width="100px" alt="icon of a lightning bolt inside of a gear - the logo for the sails generate generator"/>](https://github.com/balderdashy/sails-generate-generator) Sails Generate Generator
 
 # generator generator
 
