@@ -3,9 +3,9 @@
  */
 
 var reportback = require('reportback')()
-	, sailsgen = require('sails-generate')
-	, fsx = require('fs-extra')
-	, path = require('path');
+  , sailsgen = require('sails-generate')
+  , fsx = require('fs-extra')
+  , path = require('path');
 
 
 
@@ -19,10 +19,10 @@ var reportback = require('reportback')()
 var PATH_CEILING = path.resolve(__dirname, '.test_output');
 var CLEANUP_PATH = PATH_CEILING;
 if ( !_isSubPath(CLEANUP_PATH, PATH_CEILING) ) {
-	throw new Error(
-		'Invalid cleanup path: `'+CLEANUP_PATH+'`\n'+
-		'(must be within `'+PATH_CEILING+'`)\n'
-	);
+  throw new Error(
+    'Invalid cleanup path: `'+CLEANUP_PATH+'`\n'+
+    '(must be within `'+PATH_CEILING+'`)\n'
+  );
 }
 
 
@@ -34,32 +34,32 @@ if ( !_isSubPath(CLEANUP_PATH, PATH_CEILING) ) {
 
 module.exports = {
 
-	// Run specified generator using fixtures
-	setup: function (Generator, scope) {
-		return function _before (done) {
-			done = reportback.extend(done);
+  // Run specified generator using fixtures
+  setup: function (Generator, scope) {
+    return function _before (done) {
+      done = reportback.extend(done);
 
-			// Extend scope.rootPath with our path ceiling:
-			scope.rootPath = path.resolve(
-				PATH_CEILING,
-				scope.rootPath
-			);
+      // Extend scope.rootPath with our path ceiling:
+      scope.rootPath = path.resolve(
+        PATH_CEILING,
+        scope.rootPath
+      );
 
-			_cleanup(reportback.extend({
-				success: function () {
-					sailsgen(Generator, scope, done);
-				}
-			}));
-		};
-	},
+      _cleanup(reportback.extend({
+        success: function () {
+          sailsgen(Generator, scope, done);
+        }
+      }));
+    };
+  },
 
-	// Delete stray files
-	teardown: function () {
-		return function _after (done) {
-			done = reportback.extend(done);
-			_cleanup(done);
-		};
-	}
+  // Delete stray files
+  teardown: function () {
+    return function _after (done) {
+      done = reportback.extend(done);
+      _cleanup(done);
+    };
+  }
 };
 
 
@@ -73,7 +73,7 @@ module.exports = {
  * @return {[type]}      [description]
  */
 function _cleanup (cb) {
-	fsx.remove(PATH_CEILING, cb);
+  fsx.remove(PATH_CEILING, cb);
 }
 
 /**
@@ -84,7 +84,7 @@ function _cleanup (cb) {
  * @return {String}
  */
 function _regExcape(str) {
-	return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+  return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
 }
 
 
@@ -96,6 +96,6 @@ function _regExcape(str) {
  * @return {Boolean}         [description]
  */
 function _isSubPath(subpath, toppath) {
-	var regex = new RegExp('^' + _regExcape(toppath));
-	return subpath.match(regex);
+  var regex = new RegExp('^' + _regExcape(toppath));
+  return subpath.match(regex);
 }

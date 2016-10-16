@@ -1,13 +1,13 @@
 {
   "name": "<%=moduleName%>",
   "version": "0.10.0",
-  "description": "sails generate <%=generatorName %>",
+  "description": "sails generate <%=generatorType %>",
   "main": "Generator.js",
   "scripts": {
     "test": "mocha"
   },
   "keywords": [
-    "<%=generatorName%>",
+    "<%=generatorType%>",
     "generator",
     "sails",
     "generate",
@@ -16,8 +16,8 @@
   "author": "<%= author %>",
   "license": "MIT",
   "dependencies": {
-  	"lodash": ">=2.4.x",
-  	"merge-defaults": ">=0.1.0"
+    "lodash": ">=2.4.x",
+    "merge-defaults": ">=0.1.0"
   },
   "devDependencies": {
     "sails-generate": "*",
@@ -25,8 +25,8 @@
     "fs-extra": "*"
   },
   "sailsGenerator": {
-    "type": "<%= generatorName %>",
-    "behavior": "overrides `sails generate <%= generatorName %>`",
+    "type": "<%= generatorType %>",
+    "behavior": "overrides `sails generate <%= generatorType %>`",
     "sailsVersion": "~0.10.0"
   }
 }

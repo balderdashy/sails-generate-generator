@@ -24,10 +24,10 @@ $ sails generate generator foo
 var generate = require('sails-generate');
 var scope = {};
 generate(require('sails-generate-generator'), scope, function (err, output) {
-	if (err) throw err;
+  if (err) throw err;
 
-	// Log output for your enjoyment:
-	console.log(output);
+  // Log output for your enjoyment:
+  console.log(output);
 });
 ```
 

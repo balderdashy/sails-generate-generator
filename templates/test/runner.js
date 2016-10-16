@@ -2,7 +2,7 @@
  * Test dependencies
  */
 var lifecycle = require('./helpers/lifecycle')
-	, Generator = require('../lib');
+  , Generator = require('../lib');
 
 
 
@@ -11,10 +11,10 @@ var lifecycle = require('./helpers/lifecycle')
 //
 var SCOPE = {
 
-	rootPath: '.',
+  rootPath: '.',
 
-	// Other scope variables to include in tests
-	// ...
+  // Other scope variables to include in tests
+  // ...
 
 };
 
@@ -26,11 +26,11 @@ var SCOPE = {
 
 describe('generator', function () {
 
-	before( lifecycle.setup(Generator, SCOPE) );
+  before( lifecycle.setup(Generator, SCOPE) );
 
-	it('should work', function () {
-		// For now, just run the generator.
-	});
+  it('should work', function () {
+    // For now, just run the generator.
+  });
 
-	after( lifecycle.teardown() );
+  after( lifecycle.teardown() );
 });
